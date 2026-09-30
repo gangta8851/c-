@@ -1,0 +1,65 @@
+// 26.09.25
+//변수
+//표준 자료형 - 정수형(short, int, long long), 부동 소수점형(float, double, long double), 문자형(char)
+//변수에는 = 기호를 이용해 값을 저장할 수 있고 몇번이든 수정 가능
+//다른 변수의 값도 대입할 수 있음.
+// 
+//산술연산자 - 덧셈+, 뺄셈-, 곱셈*, 나눗셈/, 나머지%
+//x+y=sum일 때 x와 y가 둘다 정수일시 결과값도 정수가 나오게 된다.
+//
+//printf(), scanf_s("%d", &x) (%d - 형식지정자, &x - 값을 저장할 변수의 주소) 
+// 형식 지정자 종류 - %d, %f, %lf, ... [입력하지 못한 형식 지정자 종류를 더 추가하고 각각에 대한 설명 필요]
+
+#include<stdio.h>
+
+int main(void) {
+	//아래 sum 변수와 함께 쓰인 변수에 대한 예시
+	//int x = 100, y = 200;
+	//printf("result: % d \n", sum(x, y));
+	//printf("result: % d \n", sum(57, 23));
+
+	//*정수형 출력 예시*
+	//int x = 5, y = 20;
+	//result = x / y;
+	//printf("result:%d \n", result);
+
+	//int a, b;
+	//printf("두개의 정수 입력:");
+	//scanf_s("%d %d", &a, &b);
+	//printf("합계:%d", a + b);
+
+	//원의 반지름을 입력받고 이 원의 면적을 구하는 프로그램 예시
+	// [교수님 말씀 : 만약 이것으로 시험볼 때 float(float 을 가렸을 때 아래 %f를 보고 float으로 추측할 수 있을 것이다.), %f, &r, ... 등을 가리고 채우는 문제를 낼 수도 있다.]
+	//int r;
+	//float area, cir;
+	//printf("반지름 : ");
+	//scanf_s("%d", &r);
+	//area = 3.14 * r * r;
+	//cir = 2 * 3.14 * r;
+	//printf("면적 : %f, 둘레 : %f", area, cir);
+
+	//float km, dm, c;
+	//printf("환율, 돈 입력 : ");
+	//scanf_s("%f %f", &c, &km);
+	//dm = km / c;
+	//printf("%5.0f 달러이다.", dm);
+
+	//float a, b, c;
+	//printf("3개 실수:");
+	//scanf_s("% f % f % f", &a, &b, &c);
+	//printf("합계:%f, 평균:%f", a + b + c, (a + b + c) / 3);
+
+	int h, x;
+	float a;
+	printf("높이와 밑변을 입력해 주세요 : ");
+	scanf_s("%d %d", &h, &x);
+	a = 0.5 * h * x;
+	printf("면적 : %.1f", a);
+
+}
+
+//int sum(int a, int b) {
+//	int hap;
+//	hap = a * 2 + b * 3;
+//	return hap;
+//}
